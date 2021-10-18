@@ -16,8 +16,10 @@ a.sort()
 b.sort(reverse=True)
 
 for i in range(k):
-    if a[i] < b[i]:
-        a[i], b[i] = b[i], a[i]
+    idx = 0
+    if a[i] < b[idx]:
+        a[i], b[idx] = b[idx], a[i]
+        idx += 1
     else:
         break
 

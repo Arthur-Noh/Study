@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력 결과</title>
+    </head>
+    <body>
+        <script>
+            // forEach, map, filter, reduce 학습
+            const a = [10, 11, 12, 13, 14, 15];
+
+            // 얘네들은 일단 고차함수임, 함수를 매개변수로 넘겨줄 수 있다는 의미
+            // function forEach(predicate, thisArg)
+
+            // forEach
+            // forEach 는 값으로 value, index, arr (전체배열) 을 callback 해준다.
+            a.forEach((value, index) => {
+                console.log(value, index);
+            });
+
+            // map
+            // 배열 하나하나를 탐색하며 새로운 배열을 생성한다.
+            let answer = a.map((value, index) => {
+                return value * 2;
+            }, [1, 2]);
+            console.log(answer);
+
+            // filter
+            // return 이 true 인 배열만 걸러 새로운 배열을 생성한다.
+            answer = a.filter((value, index) => {
+                return value % 2 == 0;
+            }, [1, 2]);
+            console.log(answer);
+
+            // reduce
+            // reduce 는 값을 생성해서 리턴한다.
+            answer = a.reduce((pre, cur, curIndex, arr) => {
+                return pre + cur;
+            });
+            console.log(answer);
+        </script>
+    </body>
+</html>

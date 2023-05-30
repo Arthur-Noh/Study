@@ -11,6 +11,18 @@
                 margin-bottom: 3px;
             }
         </style>
+        <script>
+            const arr = [1, 13, 11, 3, 9, 21];
+
+            const solution = (arr) => {
+                const sortedArr = arr.sort(
+                    (a, b) => { return b - a; }
+                );
+                return sortedArr;
+            };
+
+            console.log(solution(arr));
+        </script>
     </head>
     <body>
         <button onclick="console.log(solution1(6, 5, 3))">1번 문제 결과</button>
